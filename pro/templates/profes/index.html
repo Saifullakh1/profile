@@ -1,0 +1,15 @@
+{% extends 'index.html' %}
+{% block content %}
+{% for prof in profiles %}
+<div class="col-lg-6 col-md-6">
+    <div class="single-post-item">
+        <div class="post-details">
+            <h4><a href="{% url 'detail_data' prof.id %}">{{ prof.first_name }}</a></h4>
+            <h4><a href="{% url 'detail_data' prof.id %}">{{ prof.last_name }}</a></h4>
+            <p>{{ prof.birth_date }}</p>
+        </div>
+    </div>
+</div>
+</form>
+{% endfor %}
+{% endblock %}
